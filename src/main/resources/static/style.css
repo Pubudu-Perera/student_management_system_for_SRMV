@@ -1,0 +1,183 @@
+:root{
+    --primary-color : rgb(115,20,18);
+    --primary-color-trans : rgba(115,20,18,0.5);
+    --secondary-color : rgb(254,241,4);
+    --secondary-color-trans : rgba(254,241,4,0.7);
+    --back-col : rgba(240,240,240,0.6);
+}
+
+
+.body{
+    font-family: 'Robato', sans-serif;
+    color: var(--primary-color);
+}
+
+.card{
+    height: 100vh;
+    background-color: rgba(11,12,15,0);
+    position: relative;
+}
+
+
+.card::before{
+    content: '';
+    background: url('./Resources/Images/classroom.jpg') no-repeat center center/cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+
+.card-header{
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.card-body{
+    margin: 50px 50px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+#guardianCard{
+    margin: 50px 105px;
+}
+
+#guardianForm{
+    margin: 50px 50px;
+}
+
+form p{
+    margin: 25px 0;
+}
+
+label{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.input-group{
+    border: none;
+}
+
+.input-group-text{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+}
+
+.form-control-plaintext{
+    border: none;
+}
+
+.form-control, .form-select{
+    border-radius: 50px;
+    border: 1px solid var(--primary-color);
+    background-color: var(--back-col);
+    color: var(--primary-color);
+    font-size: large;
+    box-shadow: var(--primary-color);
+}
+
+i{
+    margin-right: 6px;
+}
+
+.form-check-label{
+    color: var(--primary-color);
+}
+
+
+.btn{
+    background-color: var(--primary-color) ;
+    color: var(--secondary-color) ;
+    border-radius: 5px;
+}
+
+.btn:hover{
+    background-color: var(--secondary-color) ;
+    color: var(--primary-color) ;
+}
+
+#studentForm{
+    padding: 15px;
+}
+
+.nav-item{
+    margin-right: -15px;
+    margin-top: -15px;
+}
+
+
+#modalHeader{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+#modalUserTitle{
+    font-weight: bold;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:visited{
+    color: var(--primary-color-trans);
+}
+
+
+
+.modal-header{
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav{
+    position: sticky;
+}
+
+
+.dropdown-menu{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.dropdown-menu:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.dropdown-item:hover{
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.dropdown-item{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+
+}
+

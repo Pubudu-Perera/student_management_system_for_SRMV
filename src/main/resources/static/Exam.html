@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap 5 -->
+    <link href="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link href="./style.css" rel="stylesheet"/>
+
+    <!-- Jquery -->
+    <script src="./Resources/JQuery/JQuery.js"></script>
+
+    <!-- Js -->
+    <script src="./Exam.js"></script>
+
+    <!-- Font awesome -->
+    <link href="Resources/font-awesome/font-awesome/css/all.css" rel="stylesheet"/>
+
+    <!-- common js functions -->
+    <script src="./Resources/script/common.js"></script>
+
+    <!--     Jquery data tables -->
+    <link href="./Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="./Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- title bar icon-->
+    <link href="./Resources/Images/logo.jpg" rel="icon"/>
+    <title>Examination Management</title>
+</head>
+<body>
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item ms-lg-5 dropdown mt-1">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                    Student
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                                    <li><a class="dropdown-item" href="/guardian">Guardian Registration</a></li>
+                                    <li><a class="dropdown-item" href="/student">Student Registration</a></li>
+                                    <li><a class="dropdown-item" href="/student_registration">Assign Students to classroom</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 dropdown mt-1">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                    Academic Year & Events
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                                    <li><a class="dropdown-item" href="/academic_year">Academic Year & Events</a></li>
+                                    <li><a class="dropdown-item" href="/classroom">Classroom management</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 dropdown mt-1">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                    Examination
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                                    <li><a class="dropdown-item" href="/exam">Exams</a></li>
+                                    <li><a class="dropdown-item" href="/exam_results">Exam Results</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 mt-1">
+                                <a class="nav-link active fw-bold" aria-current="page" href="/attendance" style="color: rgb(254,241,4);">Attendance</a>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 dropdown mt-1">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                    Employee
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                                    <li><a class="dropdown-item" href="/employee">Employee Registration</a></li>
+                                    <li><a clas+++++++++++++++++++++++-++++++++++++++++++++++++++++++++++++++s="dropdown-item" href="/teacher">Teacher Registration</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 mt-1" >
+                                <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 dropdown mt-1">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                    Administration
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                                    <li><a class="dropdown-item" href="/user">User Management</a></li>
+                                    <li><a class="dropdown-item" href="/privilege">Privilege Management</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item ms-lg-5 dropdown mt-1">
+                                <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                    Reports
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1>Examination Management</h1>
+                        </div>
+
+                        <div class="card-body">
+
+                            <!--Main form-->
+                            <div class="row">
+                                <!-- Main form area-->
+                                <div class="col-4">
+                                    <form onsubmit="return false" id="examForm">
+
+                                        <!--*-->
+                                        <div class="row mb-2">
+                                            <div class="col text-end">
+                                                <span class="fw-bold" id="required"><span style="color:red ;">*</span>Required</span>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Academic Year-->
+                                        <div class="row mb-2">
+
+                                            <div class="col-4">
+                                                <label for="selectAcaYear" class="fw-bold col-form-label">Academic Year :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+
+                                                <select class="form-select" id="selectAcaYear" required
+                                                        onchange="selectValidator(selectAcaYear,'new_exam','academic_year_id','old_exam'); getExamEventsByAcaYear(); examNameAutoGeneration();">
+<!--                                                    the order of the above functions are crucial. function to Name auto fill should be last. Other functions need to execute first-->
+                                                </select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Event-->
+                                        <div class="row mb-2">
+
+                                            <div class="col-4">
+                                                <label for="selectEvent" class="fw-bold col-form-label">Exam :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+                                                <select class="form-select" id="selectEvent"
+                                                        onchange="selectValidator(selectEvent,'new_exam','event_id','old_exam'); examNameAutoGeneration();"
+                                                        required></select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Grade-->
+                                        <div class="row mb-2">
+
+                                            <div class="col-4">
+                                                <label for="selectGrade" class="form-label">Grade :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+                                                <select class="form-select" id="selectGrade"
+                                                        onchange="selectValidator(selectGrade,'new_exam','grade_id','old_exam'); examNameAutoGeneration(); getSubjectsByGrade();"
+                                                        required></select>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Exam name-->
+                                        <div class="row mb-2">
+                                            <div class="col-4">
+                                                <label for="textName" class="form-label">Exam Name :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+                                                <input type="text" class="form-control" id="textName"
+                                                       placeholder="Enter examination's name"  readonly required>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Start Date-->
+                                        <div class="row mb-2">
+                                            <div class="col-4">
+                                                <label for="dateStart" class="form-label">Start Date :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+                                                <input type="date" class="form-control" id="dateStart"
+                                                       onchange="dateValidator(dateStart,'new_exam','start_date','old_exam'); setTimeMinMax();"
+                                                       placeholder="Select The Starting Date"  required>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Finish Date-->
+                                        <div class="row mb-2">
+                                            <div class="col-4">
+                                                <label for="dateEnd" class="form-label">Finish Date :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+                                                <input type="date" class="form-control" id="dateEnd"
+                                                       onchange="dateValidator(dateEnd,'new_exam','end_date','old_exam'); setTimeMinMax();"
+                                                       placeholder="Select The Ending Date"  required>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!--Exam Status-->
+                                        <div class="row mb-2">
+
+                                            <div class="col-4">
+                                                <label for="selectExamStatus" class="fw-bold col-form-label">Examination Status :<span
+                                                        style="color:red ;">*</span></label>
+                                            </div>
+
+                                            <div class="col-8">
+                                                <select class="form-select" id="selectExamStatus" required
+                                                        onchange="selectValidator(selectExamStatus,'new_exam','exam_status_id','old_exam')"></select>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="col-1"></div>
+
+<!--                                inner form & table-->
+                                <div class="col-7">
+
+                                    <h3 class="h3 text-center">Subjects of The Examination</h3>
+
+                                    <!-- subject Inner form-->
+                                    <div class="row mt-3">
+
+                                                    <!--subject-->
+                                                    <div class="col-5">
+                                                        <div class="input-group">
+                                                            <span class="input-group-text fw-bold col-4"
+                                                                   for="selectSubject">Subject :<span
+                                                                    style="color: red; font-size: 18px">*</span></span>
+                                                            <select class="form-select" id="selectSubject"
+                                                                    required onchange="selectValidator(selectSubject,'new_examHasSubjects','subjects_id','old_examHasSubjects')">
+                                                                <option value="">Select Subject</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-1"></div>
+
+                                                    <!--Paper type-->
+                                                    <div class="col-6">
+                                                            <div class="input-group">
+                                                                <span class="input-group-text fw-bold col-4"
+                                                                       for="selectPaperType">Paper Type :<span
+                                                                        style="color: red; font-size: 18px">*</span></span>
+                                                                <select class="form-select" id="selectPaperType"
+                                                                        required onchange="selectValidator(selectPaperType,'new_examHasSubjects','paper_type_id','old_examHasSubjects')"></select>
+                                                            </div>
+                                                    </div>
+
+                                    </div>
+
+
+
+<!--                                                Start + End-->
+                                                <div class="row mt-3" >
+
+                                                    <!--start-->
+                                                    <div class="col-5">
+                                                        <div class="input-group">
+                                                            <span class="input-group-text fw-bold col-4"
+                                                                   for="dateStartTime">Start :<span
+                                                                    style="color: red; font-size: 18px">*</span></span>
+                                                            <input type="datetime-local" class="form-control"
+                                                                   id="dateStartTime" onchange="dateValidator(dateStartTime,'new_examHasSubjects','start','old_examHasSubjects')" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-1"></div>
+
+                                                    <!--End-->
+                                                    <div class="col-6">
+                                                        <div class="input-group">
+                                                            <span class="input-group-text fw-bold col-4"
+                                                                       for="dateEndTime">End :<span
+                                                                        style="color: red; font-size: 18px">*</span></span>
+                                                            <input type="datetime-local" class="form-control"
+                                                                       id="dateEndTime" onchange="dateValidator(dateEndTime,'new_examHasSubjects','end','old_examHasSubjects')" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <!-- inner subject form buttons-->
+                                                <div class="row mt-3">
+                                                    <div class="col text-end">
+                                                        <button class="btn">CLEAR</button>
+                                                        <button class="btn" onclick="submitInnerSubjectForm()">SUBMIT
+                                                        </button>
+                                                    </div>
+                                                </div>
+
+<!--                                    Subject inner table-->
+                                    <div class="row mt-3">
+
+                                        <div class="col">
+
+                                            <table class="table mt-4" id="innerTableSubject">
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Subject</th>
+                                                        <th>Type</th>
+                                                        <th>Start</th>
+                                                        <th>End</th>
+                                                        <th>Modify</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--main form buttons-->
+                            <div class="row mt-lg-5">
+                                 <div class="col text-end">
+                                                <button type="reset" class="btn btn-warning" style="width: 20%" onclick="resetExamForm()">
+                                                    CLEAR
+                                                </button>
+                                                <button type="submit" id="examUpdate" style="width: 20%" class="btn btn-danger" onclick="updateExamForm()">
+                                                    UPDATE
+                                                </button>
+                                                <button type="submit" style="width: 20%" id="examSubmit" class="btn btn-success"
+                                                        onclick="submitExamForm()">SUBMIT
+                                                </button>
+                                            </div>
+                            </div>
+
+                            <!--Main table-->
+                            <div class="row mt-5">
+
+                                <div class="col">
+                                       <table class="table table-striped table-hover" id="tableExam">
+                                             <thead class="table-dark">
+                                                  <tr>
+                                                            <th>Index</th>
+                                                            <th>Exam Name</th>
+                                                            <th>Start Date</th>
+                                                            <th>End date</th>
+                                                            <th>Subjects</th>
+                                                            <th>Status</th>
+                                                            <th>Modify</th>
+                                                  </tr>
+                                             </thead>
+
+                                             <tbody>
+
+                                             </tbody>
+                                       </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

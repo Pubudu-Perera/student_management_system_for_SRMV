@@ -1,0 +1,36 @@
+id's of all attributes in Guardian Module                   object properties in Guardian Module
+1)textFullName                                              1)full_name
+2)textInitials                                              2)name_with_initials
+3)textNIC                                                   3)nic
+4)dateDOB                                                   4)date_of_birth
+5)genderMale                                                5)gender
+6)genderFemale                                              6)relationship_id
+7)selectRelationship                                        7)employment_status
+8)statusYes                                                 8)occupation
+9)statusNo                                                  9)mobile
+10)textOccupation                                          10)landline
+11)textMobile                                              11)email
+12)textLandline                                            12)permanent_address
+13)textEmail                                               13)current_address
+14)textPermanent_address                                   14)whatsapp
+15)textCurrent_address                                     15)telegram
+18)switchGuardianStatus                                    16)guardian_status
+16)textWhatsapp
+17)textTelegram
+
+
+
+id's of all attributes in Guardian Module
+1) textFullName
+2) textInitials
+3) textCallingName
+4) textNIC
+5) dateDOB
+6) genderMale
+7) genderFemale
+8) fileStudentPhoto
+9) selectReligion
+10) selectRace
+11) text_permanent_address
+12) text_current_address
+13) textDescription

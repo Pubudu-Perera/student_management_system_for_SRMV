@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <script src="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Jquery -->
+    <script src="./Resources/JQuery/JQuery.js"></script>
+
+    <!-- Js -->
+    <script src="./Guardian.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Resources/font-awesome/font-awesome/css/all.css" />
+
+    <!-- common js functions -->
+    <script src="./Resources/script/common.js"></script>
+
+<!--     Jquery data tables -->
+    <link rel="stylesheet" href="./Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css">
+    <script src="./Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- title bar icon-->
+    <link rel="icon" href="./Resources/Images/logo.jpg" />
+
+    <!-- font = Robato -->
+    <link rel="stylesheet" href="./Resources/Font/Roboto-Regular.ttf" />
+
+    <title>Guardian Management</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+
+
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Student
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Guardian.html">Guardian Registration</a></li>
+                                <li><a class="dropdown-item" href="Student.html">Student Registration</a></li>
+                                <li><a class="dropdown-item" href="StudentRegistration.html">Assign Students to classroom</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Academic Year & Events
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Academic_Year.html">Academic Year & Events</a></li>
+                                <li><a class="dropdown-item" href="Classroom.html">Classroom management</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Examination
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Exam.html">Exams</a></li>
+                                <li><a class="dropdown-item" href="ExamResults.html">Exam Results</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 mt-1">
+                            <a class="nav-link active fw-bold" aria-current="page" href="Attendance.html" style="color: rgb(254,241,4);">Attendance</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Employee
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Employee.html">Employee Registration</a></li>
+                                <li><a class="dropdown-item" href="Teacher.html">Teacher Registration</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 mt-1" >
+                            <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Administration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="User.html">User Management</a></li>
+                                <li><a class="dropdown-item" href="Privilege.html">Privilege Management</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Reports
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card" style="height: 200vh;">
+                    <div class="card-header">
+                        <h1 class="h1">Guardian Management</h1>
+                    </div>
+
+                    <div class="card-body">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="form-tab" data-bs-toggle="tab"
+                                        data-bs-target="#form" type="button" role="tab" aria-controls="form"
+                                        aria-selected="true">
+                                    Guardian Registration Form
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table"
+                                        type="button" role="tab" aria-controls="table" aria-selected="false">
+                                    Guardian View
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+
+
+                            <!-- form area -->
+                            <div class="tab-pane active" id="form" role="tabpanel" aria-labelledby="form-tab"
+                                tabindex="0" style="height:auto ;">
+
+                                <form onsubmit="return false" id="guardianForm">
+
+                                    <div class="row mt-3">
+                                        <p style="text-align: right; font-weight: bold;"><span style="color:red;">*</span>Required </p>
+                                    </div>
+
+                                    <!--Accordion + Guardian form content-->
+                                    <div class="mb-5">
+                                        <div class="accordion" id="guardianAccordion">
+
+                                            <!-- Accordion Personal Data -->
+                                            <div class="accordion-item">
+
+                                                <h2 class="accordion-header" id="headingPersonal">
+                                                    <button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#accordionPersonal"
+                                                            aria-expanded="true" aria-controls="accordionPersonal">Personal Details</button>
+                                                </h2>
+                                                <div id="accordionPersonal" class="accordion-collapse collapse show" aria-labelledby="headingPersonal">
+                                                    <div class="accordion-body">
+
+
+                                                        <!-- Guardian full name + name with initials-->
+                                                        <div class="row mb-4">
+
+<!--                                                            full name-->
+                                                            <div class="col-7">
+                                                                <label for="textFullName" class="form-label">Guardian's Full Name :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <input type="text" class="form-control" id="textFullName"
+                                                                       placeholder="Enter Guardian's Full Name"
+                                                                       onkeyup="textValidator(textFullName,'^[A-Z][A-Za-z]{4,}(?: [a-zA-Z]+){0,15}$','new_guardian','full_name','old_guardian')"
+                                                                       data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ex-: Polwaththage Kumara Perera!" required>
+                                                            </div>
+
+
+
+<!--                                                            name with initials-->
+                                                            <div class="col-5">
+                                                                <label for="textInitials" class="form-label">Name
+                                                                    with
+                                                                    Initials
+                                                                    :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <input type="text" class="form-control"
+                                                                    id="textInitials"
+                                                                    placeholder="Enter Guardian's Name with Initials"
+                                                                       onkeyup="textValidator(textInitials,'^[#.a-zA-Z\s,-\\\/ \n]+$','new_guardian','name_with_initials','old_guardian');"
+                                                                       data-bs-toggle="tooltip" data-bs-placement="top" title="D.K Perera" required>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <!--  NIC + DOB + gender -->
+                                                        <div class="row mb-4">
+
+                                                            <!-- NIC -->
+                                                            <div class="col-4">
+                                                                <label for="textNIC" class="form-label">NIC : <span
+                                                                        style="color: red;">*</span> </label>
+                                                                <input type="text" class="form-control"
+                                                                    id="textNIC"
+                                                                    placeholder="Enter Guardian's NIC Number" onkeyup="textValidator(textNIC,'^([0-9]{9}[x|X|v|V]|[0-9]{12})$','new_guardian','nic','old_guardian'); genderThroughNIC(); dobThroughNIC(); nicValidator();"
+                                                                       data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ex-: 971941030V OR 200112345493!"   required>
+                                                            </div>
+
+                                                            <!-- DOB -->
+                                                            <div class="col-4">
+                                                                <label for="dateDOB" class="form-label">Date of Birth :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <input type="date" class="form-control" id="dateDOB"
+                                                                    placeholder="" onchange="dateValidator(dateDOB,'new_guardian','date_of_birth','old_guardian')" required>
+                                                            </div>
+
+                                                            <!-- Gender -->
+                                                            <div class="col-4">
+                                                                <label  class="form-label">Gender : <span
+                                                                        style="color: red;">*</span></label><br>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" id="genderMale" value="Male">
+                                                                    <label class="form-check-label"
+                                                                        for="genderMale" id="label_male">Male</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="gender" id="genderFemale" value="Female">
+                                                                    <label class="form-check-label"
+                                                                        for="genderFemale" id="label_female">Female</label>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                        <!-- employment status + occupation + relationship to the student -->
+                                                        <div class="row mb-4">
+
+                                                            <!-- relationship with student -->
+                                                            <div class="col-4">
+
+                                                                <label for="selectRelationship"
+                                                                    class="form-label">Relationship to
+                                                                    The
+                                                                    Student : <span style="color: red;">*</span>
+                                                                </label><br>
+
+                                                                <select class="form-select" id="selectRelationship" onchange="selectValidator(selectRelationship,'new_guardian','relationship_id','old_guardian');" required>
+
+                                                                </select>
+                                                            </div>
+
+                                                            <!-- guardian's employment status -->
+                                                            <div class="col-4">
+                                                                <label  class="form-label">Is the
+                                                                    Guardian
+                                                                    employed
+                                                                    ? :
+                                                                    <span style="color: red;">*</span></label><br>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="empStatus" id="statusYes" value="Employed" onchange="addOccupation();  radioValidator(statusYes,'new_guardian','employement_status','old_guardian',labelYes,labelNo)">
+                                                                    <label class="form-check-label"
+                                                                        for="statusYes" id="labelYes">Yes</label>
+                                                                </div>
+                                                                <div class="form-check form-check-inline">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="empStatus" id="statusNo" value="Unemployed" onchange="addOccupation(); radioValidator(statusNo,'new_guardian','employement_status','old_guardian',labelYes,labelNo)">
+                                                                    <label class="form-check-label"
+                                                                        for="statusNo" id="labelNo">No</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- occupation -->
+                                                            <div class="col-4" id="occupation" style="visibility: hidden" >
+                                                                <label id="labelOccupation" for="textOccupation" class="form-label">Occupation :</label>
+                                                                <input type="text" class="form-control" id="textOccupation"  placeholder="Enter Occupation" onkeyup="textValidator(textOccupation,'^[#.a-zA-Z\s,-\\\/ \n]+$','new_guardian','occupation','old_guardian')">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+<!--                                            &lt;!&ndash; Accordion Contact &ndash;&gt;-->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingContact">
+                                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                                        data-bs-target="#accordionContact" aria-expanded="true"
+                                                        aria-controls="accordionContact">Contact Details</button>
+                                                </h2>
+
+                                                <div id="accordionContact" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingContact">
+                                                    <div class="accordion-body">
+                                                        <!-- contact details -->
+
+                                                        <div class="row mb-4">
+
+                                                            <!-- mobile -->
+                                                            <div class="col-4">
+                                                                <label for="textMobile" class="form-label">Mobile No. : <span
+                                                                        style="color: red;">*</span> </label>
+                                                                <input type="text" class="form-control" id="textMobile"
+                                                                    placeholder="Enter Guardian's Mobile Number" onkeyup="textValidator(textMobile,'^[0][7][0,1,2,4,5,6,7,8][0-9]{7}$','new_guardian','mobile','old_guardian')" required>
+                                                            </div>
+
+                                                            <!-- landline -->
+                                                            <div class="col-4">
+                                                                <label for="textLandline" class="form-label">Landline No. :</label>
+                                                                <input type="text" class="form-control" id="textLandline"
+                                                                    placeholder="Enter Guardian's Landline Number" onkeyup="textValidator(textLandline,'^[0][0-9]{9}$','new_guardian','landline','old_guardian')">
+                                                            </div>
+
+                                                            <!-- email -->
+                                                            <div class="col-4">
+                                                                <label for="textEmail" class="form-label">E-mail :</label>
+                                                                <input type="email" class="form-control" id="textEmail"
+                                                                    placeholder="Enter Guardian's E-mail Address" onkeyup="textValidator(textEmail,'^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$','new_guardian','email','old_guardian')">
+                                                            </div>
+
+                                                        </div>
+
+
+
+                                                        <!-- Addresses + Social media-->
+                                                        <div class="row mb-4">
+
+                                                            <!-- Permanent Address -->
+                                                            <div class="col-4">
+                                                                <label for="textPermanent_address" class="form-label">Permanent
+                                                                    Address :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <textarea class="form-control" name="text_permanent_address"
+                                                                    id="textPermanent_address" rows="3" onkeyup="textValidator(textPermanent_address,'^[#.0-9a-zA-Z\s,-\\\/ \n]+$','new_guardian','permanent_address','old_guardian')" required></textarea>
+                                                            </div>
+
+                                                            <!-- Temporary Address -->
+                                                            <div class="col-4">
+                                                                <label for="textCurrent_address" class="form-label">Current Address :</label>
+                                                                <textarea class="form-control" name="textCurrent_address" id="textCurrent_address" rows="3" onkeyup="textValidator(textCurrent_address,'^[#.0-9a-zA-Z\s,-\\\/ \n]+$','new_guardian','current_address','old_guardian')"></textarea>
+                                                            </div>
+
+                                                            <!-- social media -->
+                                                            <div class="col-4">
+                                                                <label  class="form-label">Social Media :
+                                                                </label>
+
+<!--                                                            WhatsApp-->
+                                                                <div class="input-group mt-0">
+                                                                    <label class="input-group-text fw-bold"
+                                                                        for="textWhatsapp"><img
+                                                                            src="./Resources/Images/whatsapp.png" alt="whatsapp icon"></label>
+                                                                    <input type="text" id="textWhatsapp" class="form-control"
+                                                                        placeholder="WhatsApp Number" onkeyup="textValidator(textWhatsapp,'^[0][7][0,1,2,4,5,6,7,8][0-9]{7}$','new_guardian','whatsapp','old_guardian')">
+                                                                </div>
+
+<!--                                                                telegram-->
+                                                                <div class="input-group mt-1">
+                                                                    <label class="input-group-text fw-bold"
+                                                                        for="textTelegram"><img
+                                                                            src="./Resources/Images/telegram.png" alt="telegram icon"></label>
+                                                                    <input type="text" id="textTelegram" class="form-control"
+                                                                        placeholder="Telegram Number" onkeyup="textValidator(textTelegram,'^[0][7][0,1,2,4,5,6,7,8][0-9]{7}$','new_guardian','telegram','old_guardian')">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- guardian status & Assigned date -->
+                                    <div class="row mt-5 mb-5">
+
+                                        <!-- Guardian status -->
+                                        <div class="col-3">
+                                            <label for="selectGuardianStatus"
+                                                   class="form-label"> Guardian Status :<span style="color: red;">*</span>
+                                            </label><br>
+
+                                            <select class="form-select" id="selectGuardianStatus" onchange="selectValidator(selectGuardianStatus,'new_guardian','guardian_status_id','old_guardian')" required>
+
+                                            </select>
+                                        </div>
+
+                                        <div class="col-9">
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- buttons -->
+                                    <div class="row mt-5" id="#formButtons">
+                                        <div class="col-12 mt-5 text-end">
+                                            <button type="reset" id="resetGuardian" class="btn fw-bold" style="width: 20%" onclick="resetGuardianForm()">CLEAR</button>
+                                            <button type="submit" id="guardianUpdate" class="btn fw-bold" style="width: 20%" onclick="updateGuardian()">UPDATE</button>
+                                            <button type="submit" id="guardianSubmit" class="btn fw-bold" style="width: 20%" onclick="submitGuardian()">SUBMIT</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+
+                            <!-- table area -->
+                            <div class="tab-pane" id="table" role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+
+                                <div class="row mt-5">
+                                    <div class="col">
+                                        <table id="tableGuardian"
+                                               class="table table-striped table-hover shadow-lg rounded">
+                                            <thead class="table-dark">
+                                            <tr>
+                                                <th>Index</th>
+                                                <th>Name with Initials</th>
+                                                <th>Mobile</th>
+                                                <th>Address</th>
+                                                <th>Relationship</th>
+                                                <th>Guardian Status</th>
+                                                <th>Modify</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!--Modal for each Student record in the table-->
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="modalViewGuardian" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" id="modalHeader">
+                        <h5 class="modal-title" id="modalStudentTitle">Guardian Details</h5>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <table border="1" class="table table-striped table-hover shadow rounded" id="guardianViewTable"
+                               style="height:200px; width : 450px;">
+
+                            <tr>
+                                <th>Guardian ID.</th>
+                                <td id="tdId"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Full Name</th>
+                                <td id="tdFullName"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Name with Initials</th>
+                                <td id="tdNameWithInitials"></td>
+                            </tr>
+
+                            <tr>
+                                <th>NIC No.</th>
+                                <td id="tdNIC"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Date of Birth</th>
+                                <td id="tdDOB"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Gender</th>
+                                <td id="tdGender"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Employment Status</th>
+                                <td id="tdGuardian"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Occupation</th>
+                                <td id="tdEmploymentStatus"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Guardian</th>
+                                <td id="tdOccupation"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Permanent Address</th>
+                                <td id="tdPermanentAddress"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Current Address</th>
+                                <td id="tdCurrentAddress"></td>
+                            </tr>
+
+                            <tr>
+                                <th>WhatsApp</th>
+                                <td id="tdWhatsApp"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Telegram</th>
+                                <td id="tdTelegram"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Status</th>
+                                <td id="tdStatus"></td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                        <button class="btn btn-primary" onclick="printUserDetails()" type="button">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

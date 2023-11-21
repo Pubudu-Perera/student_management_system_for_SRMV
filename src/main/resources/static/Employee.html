@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+<!--    &lt;!&ndash; font = Robato &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="Resources/Font/Roboto-Regular.ttf"/>-->
+
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+    <script src="Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Resources/font-awesome/font-awesome/css/all.css"/>
+
+    <!-- Jquery -->
+    <script src="Resources/JQuery/JQuery.js"></script>
+
+    <!-- Jquery select2 -->
+
+
+    <!--     Jquery data tables -->
+    <link rel="stylesheet" href="Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css">
+    <script src="Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Js -->
+    <script src="Employee.js"></script>
+
+    <!-- common js functions -->
+    <script src="Resources/script/common.js"></script>
+
+    <!-- title bar icon-->
+    <link rel="icon" href="Resources/Images/logo.jpg"/>
+
+    <title>Employee Management</title>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Student
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/guardian">Guardian Registration</a></li>
+                            <li><a class="dropdown-item" href="/student">Student Registration</a></li>
+                            <li><a class="dropdown-item" href="/student_registration">Assign Students to classroom</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Academic Year & Events
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/academic_year">Academic Year & Events</a></li>
+                            <li><a class="dropdown-item" href="/classroom">Classroom management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Examination
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/exam">Exams</a></li>
+                            <li><a class="dropdown-item" href="/exam_results">Exam Results</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1">
+                        <a class="nav-link active fw-bold" aria-current="page" href="/attendance" style="color: rgb(254,241,4);">Attendance</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Employee
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/employee">Employee Registration</a></li>
+                            <li><a class="dropdown-item" href="/teacher">Teacher Registration</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1" >
+                        <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Administration
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/user">User Management</a></li>
+                            <li><a class="dropdown-item" href="/privilege">Privilege Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="h1 fw-bold">Employee Management</h1>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="form-tab" data-bs-toggle="tab"
+                                    data-bs-target="#form" type="button" role="tab" aria-controls="form"
+                                    aria-selected="true">
+                                Employee Registration Form
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table"
+                                    type="button" role="tab" aria-controls="table" aria-selected="false">
+                                Employee Table
+                            </button>
+                        </li>
+                    </ul>
+
+                  <!-- Tab panes -->
+                  <div class="tab-content">
+
+
+                    <!-- form area -->
+                    <div class="tab-pane active" id="form" role="tabpanel" aria-labelledby="form-tab"
+                         tabindex="0" style="height:auto ;">
+
+                      <form onsubmit="return false" id="employeeForm" >
+
+                        <!-- Required -->
+                        <div class="row mt-3">
+                          <p style="text-align: right; font-weight: bold;"><span
+                                  style="color:red;">*</span>Required </p>
+                        </div>
+
+
+                        <!-- Accordion + Student form content -->
+                        <div class="row mb-5">
+                            <div class="accordion" id="employeeAccordion">
+
+                            <!-- Accordion Personal box-->
+                            <div class="accordion-item">
+
+                            <!-- Personal details accordion header-->
+                              <h2 class="accordion-header" id="headingPersonal">
+                                <button type="button" class="accordion-button"
+                                        data-bs-toggle="collapse" data-bs-target="#accordionPersonal"
+                                        aria-expanded="true" aria-controls="accordionPersonal">Personal
+                                  Details
+                                </button>
+                              </h2>
+
+                              <!-- Accordion Personal Container -->
+                              <div id="accordionPersonal" class="accordion-collapse collapse show" area-labelledby="headingPersonal">
+
+                                <div class="accordion-body">
+
+                                  <!-- Employee full name + name with initials + calling name-->
+                                  <div class="row mb-4">
+
+                                    <!-- Full name -->
+                                    <div class="col-6">
+                                      <label for="textFullName" class="form-label">Employee's Full Name :<span style="color: red;">*</span> </label>
+                                      <input type="text" class="form-control"
+                                             id="textFullName"
+                                             placeholder="Enter Employee's Full Name"
+                                             onkeyup="textValidator(textFullName,'^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,15}$','new_employee','full_name','old_employee');"
+                                             required>
+                                    </div>
+
+                                    <!-- Name with initials -->
+                                    <div class="col-3">
+                                      <label for="textInitials" class="form-label">Name with Initials :<span style="color: red;">*</span> </label>
+                                      <input type="text" class="form-control"
+                                             id="textInitials"
+                                             placeholder="Employee's Name with Initials"
+                                             onkeyup="textValidator(textInitials,'^[#.a-zA-Z\s,-\\\/ \n]+$','new_employee','name_with_initials','old_employee');"
+                                             required>
+                                    </div>
+
+                                    <!-- Calling name -->
+                                    <div class="col-3">
+                                      <label for="textCallingName" class="form-label">
+                                        Calling Name : <span style="color: red;">*</span>
+                                      </label>
+                                      <input type="text" class="form-control"
+                                             id="textCallingName"
+                                             placeholder="Employee's Calling Name"
+                                             onkeyup="textValidator(textCallingName,'^[A-Z][a-z]{2,30}$','new_employee','calling_name','old_employee')"
+                                             required>
+                                    </div>
+                                  </div>
+
+
+                                  <!--  NIC + DOB + gender -->
+                                  <div class="row mb-4">
+
+                                    <!-- NIC -->
+                                    <div class="col-4">
+                                      <label for="textNIC" class="form-label">NIC :<span style="color: red;">*</span> </label>
+                                      <input type="text" class="form-control"
+                                             id="textNIC"
+                                             placeholder="Enter Employee's NIC Number"
+                                             onkeyup="textValidator(textNIC,'^([0-9]{9}[x|X|v|V]|[0-9]{12})$','new_employee','nic','old_employee'); genderThroughNIC(); dobThroughNIC()" required>
+                                    </div>
+
+                                    <!-- DOB -->
+                                    <div class="col-4">
+                                      <label for="dateDOB" class="form-label">Date of Birth :<span style="color: red;">*</span> </label>
+                                      <input type="date" class="form-control" id="dateDOB"
+                                             placeholder=""
+                                             onchange="dateValidator(dateDOB,'new_employee','dob','old_employee')"
+                                             required>
+                                    </div>
+
+                                    <!-- Gender -->
+                                    <div class="col-4">
+                                      <label class="form-label">Gender :
+                                        <span style="color: red;">*</span></label><br>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio"
+                                               name="gender" id="genderMale" value="Male"
+                                               onchange="radioValidator(genderMale,'new_employee','gender','old_employee','label_male','label_female');">
+                                        <label class="form-check-label"
+                                               for="genderMale" id="label_male">Male</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio"
+                                               name="gender" id="genderFemale" value="Female"
+                                               onchange="radioValidator(genderFemale,'new_employee','gender','old_employee','label_male','label_female')">
+                                        <label class="form-check-label"
+                                               for="genderFemale"
+                                               id="label_female">Female
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+
+
+                                  <!-- Civil status & description-->
+                                  <div class="row mb-4">
+
+
+                                    <!-- Civil Status-->
+                                    <div class="col-4">
+                                        <label for="fileEmployeePhoto" class="form-label">Employee's Photo</label>
+                                        <input type="file" id="fileEmployeePhoto" class="form-control" onchange="fileValidation(fileEmployeePhoto,'new_employee','employee_photo','old_employee')">
+                                    </div>
+
+                                      <div class="col-4">
+                                          <label for="selectCivilStatus" class="form-label">Civil Status :
+                                              <span style="color: red;">*</span> </label>
+                                          <select name="selectCivilStatus" id="selectCivilStatus"
+                                                  class="form-select"
+                                                  onchange="selectValidator(selectCivilStatus,'new_employee','civil_status_id','old_employee')"
+                                                  required>
+                                          </select>
+                                      </div>
+
+                                    <!-- Description -->
+                                    <div class="col-4">
+                                        <label for="description" class="form-label">Description :</label>
+                                        <textarea class="form-control" name="description"
+                                                  id="description" rows="2"
+                                                  onkeyup="textValidator(description,'^[#.0-9a-zA-Z\s,-\\\/ \n]+$','new_employee','description','old_employee')">
+                                        </textarea>
+                                      </div>
+
+                                  </div>
+
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                            <!-- Accordion Contact Box-->
+                            <div class="accordion-item">
+
+                              <h2 class="accordion-header" id="headingContact">
+                                <button type="button" class="accordion-button collapsed"
+                                        data-bs-toggle="collapse" data-bs-target="#accordionContact"
+                                        aria-expanded="false" aria-controls="accordionContact">Contact Details
+                                </button>
+                              </h2>
+
+                              <!-- Accordion Contact Container-->
+                              <div id="accordionContact" class="accordion-collapse collapse show" aria-labelledby="headingContact">
+
+                                <div class="accordion-body">
+
+                                  <!-- mobile. + landline + email-->
+                                  <div class="row mb-4">
+
+                                    <!-- mobile -->
+                                    <div class="col-4">
+                                      <label for="textMobile" class="form-label">Mobile No. : <span
+                                              style="color: red;">*</span> </label>
+                                      <input type="text" class="form-control" id="textMobile"
+                                             placeholder="Enter Employee's Mobile Number" onkeyup="textValidator(textMobile,'^[0][7][0,1,2,4,5,6,7,8][0-9]{7}$','new_employee','mobile','old_employee')" required>
+                                    </div>
+
+                                    <!-- landline -->
+                                    <div class="col-4">
+                                      <label for="textLandline" class="form-label">Landline No. :</label>
+                                      <input type="text" class="form-control" id="textLandline"
+                                             placeholder="Enter Employee's Landline Number" onkeyup="textValidator(textLandline,'^[0][0-9]{9}$','new_employee','landline','old_employee')">
+                                    </div>
+
+                                    <!-- email -->
+                                    <div class="col-4">
+                                      <label for="textEmail" class="form-label">E-mail :</label>
+                                      <input type="email" class="form-control" id="textEmail"
+                                             placeholder="Enter Employee's E-mail Address" onkeyup="textValidator(textEmail,'^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$','new_employee','email','old_employee')">
+                                    </div>
+
+                                  </div>
+
+                                  <!-- Addresses + Social media-->
+                                  <div class="row mb-4">
+
+                                    <!-- Permanent Address -->
+                                    <div class="col-4">
+                                      <label for="textPermanent_address" class="form-label">Permanent Address :<span style="color: red;">*</span> </label>
+                                      <textarea class="form-control" name="text_permanent_address"
+                                                id="textPermanent_address" rows="3" onkeyup="textValidator(textPermanent_address,'^[#.0-9a-zA-Z\s,-\\\/ \n]+$','new_employee','permanent_address','old_employee')" required></textarea>
+                                    </div>
+
+                                    <!-- Temporary Address -->
+                                    <div class="col-4">
+                                      <label for="textCurrent_address" class="form-label">Current Address :</label>
+                                      <textarea class="form-control" name="textCurrent_address" id="textCurrent_address" rows="3" onkeyup="textValidator(textCurrent_address,'^[#.0-9a-zA-Z\s,-\\\/ \n]+$','new_employee','current_address','old_employee')"></textarea>
+                                    </div>
+
+                                    <!-- social media -->
+                                    <div class="col-4">
+                                      <label  class="form-label">Social Media :</label>
+
+                                      <div class="input-group mt-0">
+                                        <label class="input-group-text fw-bold"
+                                               for="textWhatsapp"><img
+                                                src="./Resources/Images/whatsapp.png" alt="whatsapp icon"></label>
+                                        <input type="text" id="textWhatsapp" class="form-control"
+                                               placeholder="WhatsApp Number" onkeyup="textValidator(textWhatsapp,'^[0][7][0,1,2,4,5,6,7,8][0-9]{7}$','new_employee','whatsapp','old_employee')">
+                                      </div>
+                                      <div class="input-group mt-1">
+                                        <label class="input-group-text fw-bold"
+                                               for="textTelegram"><img
+                                                src="./Resources/Images/telegram.png" alt="telegram icon"></label>
+                                        <input type="text" id="textTelegram" class="form-control"
+                                               placeholder="Telegram Number" onkeyup="textValidator(textTelegram,'^[0][7][0,1,2,4,5,6,7,8][0-9]{7}$','new_employee','telegram','old_employee')">
+                                      </div>
+                                    </div>
+
+                                  </div>
+
+                                </div>
+
+                              </div>
+                            </div>
+
+
+                              <!-- Accordion Professional-->
+                              <div class="accordion-item">
+
+                                <h2 class="accordion-header" id="headingProfessional">
+                                  <button type="button" class="accordion-button collapsed"
+                                          data-bs-toggle="collapse" data-bs-target="#accordionProfessional"
+                                          aria-expanded="false" aria-controls="accordionContact">Professional Details
+                                  </button>
+                                </h2>
+
+                                <div id="accordionProfessional" class="accordion-collapse collapse show" aria-labelledby="headingProfessional">
+
+                                  <div class="accordion-body">
+
+                                    <!-- Employee No. + Designation + Recruitment-->
+                                    <div class="row mb-4">
+
+
+                                      <!--Designation-->
+                                      <div class="col-4">
+                                        <label for="selectDesignation" class="form-label">Designation :<span style="color: red;">*</span></label>
+                                        <select name="selectGuardian1" id="selectDesignation"
+                                                class="form-select"
+                                                onchange="selectValidator(selectDesignation,'new_employee','designation_id','old_employee')"
+                                                required>
+                                        </select>
+                                      </div>
+
+                                        <div class="col-4"></div>
+
+                                      <!-- Recruitment date -->
+                                      <div class="col-4">
+                                        <label for="dateRecruitment" class="form-label">Recruitment Date :<span style="color: red;">*</span> </label>
+                                        <input type="date" class="form-control" id="dateRecruitment"
+                                               placeholder=""
+                                               onchange="dateValidator(dateRecruitment,'new_employee','recruitment_date','old_employee')"
+                                               required>
+                                      </div>
+
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+
+
+                        <!-- buttons -->
+                        <div class="row mt-5" id="#formButtons">
+                          <div class="col mt-5 text-end">
+                            <button type="reset" class="btn fw-bold" style="width: 20%">CLEAR</button>
+                            <button class="btn fw-bold" id="employeeUpdate" style="width: 20%" onclick="updateEmployee()">UPDATE</button>
+                            <button type="submit" id="employeeSubmit" class="btn fw-bold" style="width: 20%" onclick="submitEmployee()">SUBMIT</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+
+                    <!-- table area -->
+                    <div class="tab-pane" id="table" role="tabpanel" aria-labelledby="table-tab" tabindex="0">
+
+                      <table id="tableEmployee" class="table table-hover">
+                        <thead class="table-dark">
+                        <tr>
+                          <th>#</th>
+                          <th>Employee No.</th>
+                          <th>Name with Initials</th>
+                          <th>Calling Name</th>
+                          <th>Designation</th>
+                          <th>NIC No.</th>
+                          <th>Mobile No.</th>
+                          <th>Employee Status</th>
+                          <th>Modify</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--        Modal for each user record in the table-->
+    <div class="modal fade" id="modalViewEmployee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" id="modalHeader">
+                    <h5 class="modal-title" id="modalUserTitle">Employee Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <table id="userViewTable" border="1" class="table table-striped table-hover shadow rounded" style="height:200px; width : 450px;">
+
+                        <tr>
+                            <th>ID.</th>
+                            <td id="tdId"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Employee's Full Name</th>
+                            <td id="tdEmployeeFullName"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Employee's Name with Initials</th>
+                            <td id="tdEmployeeNameWithIni"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Employee's Calling Name</th>
+                            <td id="tdEmployeeCallingName"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Employee's NIC </th>
+                            <td id="tdNIC"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Date of Birth</th>
+                            <td id="tdDOB"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Gender</th>
+                            <td id="tdGender"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Civil Status</th>
+                            <td id="tdCivilStatus"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Description</th>
+                            <td id="tdDescription"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Mobile</th>
+                            <td id="tdMobile"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Landline</th>
+                            <td id="tdLandline"></td>
+                        </tr>
+
+                        <tr>
+                            <th>E-mail</th>
+                            <td id="tdEmail"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Permanent Address</th>
+                            <td id="tdPermanentAddress"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Current Address</th>
+                            <td id="tdCurrentAddress"></td>
+                        </tr>
+
+                        <tr>
+                            <th>WhatsApp</th>
+                            <td id="tdWhatsApp"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Telegram</th>
+                            <td id="tdTelegram"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Designation</th>
+                            <td id="tdDesignation"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Recruitment Date</th>
+                            <td id="tdRecruitment"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Status</th>
+                            <td id="tdStatus"></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="printEmployeeDetails()">Print</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

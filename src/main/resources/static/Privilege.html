@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap 5 -->
+    <link href="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link href="./style.css" rel="stylesheet"/>
+
+    <!-- Jquery -->
+    <script src="./Resources/JQuery/JQuery.js"></script>
+
+    <!-- Js -->
+    <script src="./Privilege.js"></script>
+
+    <!-- Font awesome -->
+    <link href="Resources/font-awesome/font-awesome/css/all.css" rel="stylesheet"/>
+
+    <!-- common js functions -->
+    <script src="./Resources/script/common.js"></script>
+
+    <!--     Jquery data tables -->
+    <link href="./Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="./Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- title bar icon-->
+    <link href="./Resources/Images/logo.jpg" rel="icon"/>
+
+    <title>Privilege Management</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Student
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="/guardian">Guardian Registration</a></li>
+                                <li><a class="dropdown-item" href="/student">Student Registration</a></li>
+                                <li><a class="dropdown-item" href="/student_registration">Assign Students to classroom</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Academic Year & Events
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="/academic_year">Academic Year & Events</a></li>
+                                <li><a class="dropdown-item" href="/classroom">Classroom management</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Examination
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="/exam">Exams</a></li>
+                                <li><a class="dropdown-item" href="/exam_results">Exam Results</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 mt-1">
+                            <a class="nav-link active fw-bold" aria-current="page" href="/attendance" style="color: rgb(254,241,4);">Attendance</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Employee
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="/employee">Employee Registration</a></li>
+                                <li><a class="dropdown-item" href="/teacher">Teacher Registration</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 mt-1" >
+                            <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Administration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="/user">User Management</a></li>
+                                <li><a class="dropdown-item" href="/privilege">Privilege Management</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Reports
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Privilege Management</h1>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+
+<!--                            Form area-->
+
+                            <div class="col-4">
+                                <form onsubmit="return false" id="privilegeForm">
+
+                                    <!--*-->
+                                    <div class="row mb-2">
+                                        <div class="col text-end">
+                                            <span class="fw-bold" id="required"><span style="color:red ;">*</span>Required</span>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Role-->
+                                    <div class="row mb-2">
+
+                                        <div class="col-4">
+                                            <label for="selectRole" class="fw-bold col-form-label">Role :<span
+                                                    style="color:red ;">*</span></label>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <select class="form-select" id="selectRole" required
+                                                    onchange="selectValidator(selectRole,'new_privilege','roles_id','old_privilege')"></select>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Module-->
+                                    <div class="row mb-2">
+
+                                        <div class="col-4">
+                                            <label for="selectModule" class="fw-bold col-form-label">Module :<span
+                                                    style="color:red ;">*</span></label>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <select class="form-select" id="selectModule"
+                                                    onchange="selectValidator(selectModule,'new_privilege','module_id','old_privilege')"
+                                                    required></select>
+                                        </div>
+                                    </div>
+
+
+                                    <!--select-->
+                                    <div class="row mb-2">
+
+                                        <div class="col-4">
+                                            <label class="fw-bold col-form-label">Select :<span
+                                                    style="color:red ;">*</span></label>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <br>
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch" name="select"
+                                                       id="switchSelectYes"
+                                                       value="true"
+                                                       onchange="radioValidator(switchSelectYes,'new_privilege','select_permit','old_privilege','label_select_granted','label_select_notGranted')">
+                                                <label for="switchSelectYes" id="label_select_granted"
+                                                       class="form-check-label">Granted</label>
+                                            </div>
+
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch" name="select"
+                                                       id="switchSelectNo" value="false"
+                                                       onchange="radioValidator(switchSelectNo,'new_privilege','select_permit','old_privilege','label_select_granted','label_select_notGranted')">
+                                                <label for="switchSelectNo" id="label_select_notGranted"
+                                                       class="form-form-label">Not Granted</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--update-->
+                                    <div class="row mb-2">
+                                        <div class="col-4">
+                                            <label class="fw-bold col-form-label">Update :<span
+                                                    style="color:red ;">*</span></label>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <br>
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch" name="update"
+                                                       id="switchUpdateYes" value="true"
+                                                       onchange="radioValidator(switchUpdateYes,'new_privilege','update_permit','old_privilege','label_update_granted','label_update_notGranted')">
+                                                <label for="switchUpdateYes" class="form-check-label"
+                                                       id="label_update_granted">Granted</label>
+                                            </div>
+
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch" name="update"
+                                                       id="switchUpdateNo" value="false"
+                                                       onchange="radioValidator(switchUpdateNo,'new_privilege','update_permit','old_privilege','label_update_granted','label_update_notGranted')">
+                                                <label for="switchUpdateNo" class="form-form-label"
+                                                       id="label_update_notGranted">Not Granted</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--insert-->
+                                    <div class="row mb-2">
+                                        <div class="col-4">
+                                            <label class="fw-bold col-form-label">Insert :<span
+                                                    style="color:red ;">*</span></label>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <br>
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch" name="insert"
+                                                       value="true" id="switchInsertYes"
+                                                       onchange="radioValidator(switchInsertYes,'new_privilege','insert_permit','old_privilege','label_insert_granted','label_insert_notGranted')">
+                                                <label for="switchInsertYes" class="form-check-label"
+                                                       id="label_insert_granted">Granted</label>
+                                            </div>
+
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch" name="insert"
+                                                       value="false" id="switchInsertNo"
+                                                       onchange="radioValidator(switchInsertNo,'new_privilege','insert_permit','old_privilege','label_insert_granted','label_insert_notGranted')">
+                                                <label for="switchInsertNo" class="form-form-label"
+                                                       id="label_insert_notGranted">Not Granted</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--delete-->
+                                    <div class="row mb-2">
+                                        <div class="col-4">
+                                            <label class="fw-bold col-form-label">Delete :<span
+                                                    style="color:red ;">*</span></label>
+                                        </div>
+
+                                        <div class="col-8">
+                                            <br>
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch"
+                                                       value="true" name="delete" id="switchDeleteYes"
+                                                       onchange="radioValidator(switchDeleteYes,'new_privilege','delete_permit','old_privilege','label_delete_granted','label_delete_notGranted')">
+                                                <label for="switchDeleteYes" class="form-check-label"
+                                                       id="label_delete_granted">Granted</label>
+                                            </div>
+
+                                            <div class="form-check form-switch form-check-inline">
+                                                <input type="radio" class="form-check-input" role="switch"
+                                                       value="false" name="delete" id="switchDeleteNo"
+                                                       onchange="radioValidator(switchDeleteNo,'new_privilege','delete_permit','old_privilege','label_delete_granted','label_delete_notGranted')">
+                                                <label for="switchDeleteNo" class="form-form-label"
+                                                       id="label_delete_notGranted">Not Granted</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--buttons-->
+                                    <div class="row">
+                                        <div class="col">
+                                            <br><br>
+                                            <button type="reset" class="btn btn-warning" onclick="resetPrivilegeForm()">CLEAR</button>
+                                            <button type="submit" id="privilegeUpdate" class="btn btn-danger" onclick="updatePrivilegeForm()">UPDATE</button>
+                                            <button type="submit" id="privilegeSubmit" class="btn btn-success" onclick="submitPrivilegeForm()">SUBMIT</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+<!--                            Table area-->
+                            <div class="col-8">
+                                <table id="privilegeTable" class="table table-striped table-hover shadow-lg rounded">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Role</th>
+                                            <th>Module</th>
+                                            <th>SELECT</th>
+                                            <th>UPDATE</th>
+                                            <th>INSERT</th>
+                                            <th>DELETE</th>
+                                            <th>Modify</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--        Modal for each privilege record in the table-->
+        <div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="modalViewPrivilege" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header" id="modalHeader">
+                        <h5 class="modal-title" id="modalUserTitle">Privilege Details</h5>
+                        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <table border="1" class="table table-striped table-hover shadow rounded" id="privilegeViewTable"
+                               style="height:200px; width : 450px;">
+
+                            <tr>
+                                <th>ID.</th>
+                                <td id="tdId"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Role</th>
+                                <td id="tdRole"></td>
+                            </tr>
+
+                            <tr>
+                                <th>Module</th>
+                                <td id="tdModule"></td>
+                            </tr>
+
+                            <tr>
+                                <th>SELECT</th>
+                                <td id="tdSelect"></td>
+                            </tr>
+
+                            <tr>
+                                <th>UPDATE</th>
+                                <td id="tdUpdate"></td>
+                            </tr>
+
+                            <tr>
+                                <th>INSERT</th>
+                                <td id="tdInsert"></td>
+                            </tr>
+
+                            <tr>
+                                <th>DELETE</th>
+                                <td id="tdDelete"></td>
+                            </tr>
+
+                        </table>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Close</button>
+                        <button class="btn btn-primary" onclick="printPrivilegeDetails()" type="button">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

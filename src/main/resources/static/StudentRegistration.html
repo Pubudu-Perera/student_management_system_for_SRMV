@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <!-- bootstrap 5 -->
+    <link href="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link href="./style.css" rel="stylesheet"/>
+
+    <!-- Jquery -->
+    <script src="./Resources/JQuery/JQuery.js"></script>
+
+    <!-- Js -->
+    <script src="./StudentRegistration.js"></script>
+
+    <!-- Font awesome -->
+    <link href="Resources/font-awesome/font-awesome/css/all.css" rel="stylesheet"/>
+
+    <!-- common js functions -->
+    <script src="./Resources/script/common.js"></script>
+
+    <!--     Jquery data tables -->
+    <link href="./Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
+    <script src="./Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- title bar icon-->
+    <link href="./Resources/Images/logo.jpg" rel="icon"/>
+    <title>Assign Student to Classroom</title>
+</head>
+<body>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Student
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="Guardian.html">Guardian Registration</a></li>
+                            <li><a class="dropdown-item" href="Student.html">Student Registration</a></li>
+                            <li><a class="dropdown-item" href="StudentRegistration.html">Assign Students to classroom</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Academic Year & Events
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="Academic_Year.html">Academic Year & Events</a></li>
+                            <li><a class="dropdown-item" href="Classroom.html">Classroom management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Examination
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="Exam.html">Exams</a></li>
+                            <li><a class="dropdown-item" href="ExamResults.html">Exam Results</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1">
+                        <a class="nav-link active fw-bold" aria-current="page" href="Attendance.html" style="color: rgb(254,241,4);">Attendance</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Employee
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="Employee.html">Employee Registration</a></li>
+                            <li><a class="dropdown-item" href="Teacher.html">Teacher Registration</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1" >
+                        <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Administration
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="User.html">User Management</a></li>
+                            <li><a class="dropdown-item" href="Privilege.html">Privilege Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="EmployeeReport.html">Employee Report</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Assign Student to Classroom</h1>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="form-tab" data-bs-toggle="tab"
+                                    data-bs-target="#form" type="button" role="tab" aria-controls="form"
+                                    aria-selected="true">
+                                Assign a classroom to student
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table"
+                                    type="button" role="tab" aria-controls="table" aria-selected="false">
+                                Registration View
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+
+
+                        <!-- form area -->
+                        <div class="tab-pane active" id="form" role="tabpanel" aria-labelledby="form-tab"
+                             tabindex="0" style="height:auto ;">
+
+                            <form onsubmit="return false" id="StuRegForm">
+
+                                <div class="row mt-3">
+                                    <p style="text-align: right; font-weight: bold;"><span style="color:red;">*</span>Required
+                                    </p>
+                                </div>
+
+                                <div class="row mb-5">
+                                    <div class="col-9">
+                                        <div class="accordion" id="StudentRegistrationAccordion">
+
+                                            <!-- Accordion Personal Data -->
+                                            <div class="accordion-item">
+
+                                                <h2 class="accordion-header" id="headingRegistration">
+                                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                                            data-bs-target="#accordionRegDetails"
+                                                            aria-expanded="true" aria-controls="accordionRegDetails">
+                                                        Registration Details
+                                                    </button>
+                                                </h2>
+                                                <div id="accordionRegDetails" class="accordion-collapse collapse show"
+                                                     aria-labelledby="headingRegistration">
+                                                    <div class="accordion-body">
+
+
+                                                        <!-- Academic year + Student + classroom-->
+                                                        <div class="row mb-4">
+
+                                                            <!-- Academic year-->
+                                                            <div class="col-3">
+                                                                <label for="selectAcaYear" class="form-label">Academic Year :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <select class="form-select" id="selectAcaYear"
+                                                                        onchange="selectValidator(selectAcaYear,'new_student_registration','academic_year_id','old_student_registration'); getAcademicYearFee();"
+                                                                        required>
+                                                                </select>
+                                                            </div>
+
+
+                                                            <!-- Grade-->
+                                                            <div class="col-2">
+                                                                <label for="selectGrade" class="form-label">Grade :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <select class="form-select" id="selectGrade"
+                                                                        onchange="selectValidator(selectGrade,'new_student_registration','grade_id','old_student_registration'); getClassroomsByGrade(); StudentStudyingSubjects();"
+                                                                        required>
+                                                                </select>
+                                                            </div>
+
+
+                                                            <!-- classroom-->
+                                                            <div class="col-2">
+                                                                <label for="selectClassroom" class="form-label">Classroom :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <select class="form-select" id="selectClassroom"
+                                                                        onchange="selectValidator(selectClassroom,'new_student_registration','classroom_id','old_student_registration')"
+                                                                        required>
+                                                                </select>
+                                                            </div>
+
+                                                            <!-- Student-->
+                                                            <div class="col-5">
+                                                                <label for="selectInputStudent" class="form-label">Student :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <input type="text" list="studentDataList" placeholder="Search & Select the student" class="form-control" id="selectInputStudent"
+                                                                onchange="dataListValidator(selectInputStudent,'','new_student_registration','student_id','old_student_registration','students','full_name',showStudent,'registration_no')"
+                                                                onkeyup="dataListValidator(selectInputStudent,'','new_student_registration','student_id','old_student_registration','students','full_name',showStudent,'registration_no')">
+                                                                <datalist id="studentDataList">
+
+                                                                </datalist>
+
+                                                                <div class="form-text" id="showStudent">Student's Registration Number is</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                            <!--Payments-->
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingPayment">
+                                                    <button type="button" class="accordion-button" data-bs-toggle="collapse"
+                                                            data-bs-target="#accordionPayment" aria-expanded="true"
+                                                            aria-controls="accordionPayment">Payment Details
+                                                    </button>
+                                                </h2>
+
+                                                <div id="accordionPayment" class="accordion-collapse collapse show"
+                                                     aria-labelledby="headingPayment">
+                                                    <div class="accordion-body">
+
+                                                        <div class="row mb-4">
+
+<!--                                                            Total fee-->
+                                                            <div class="col-4">
+                                                                <label class="form-label" for="textTotal">Total Fee for the academic year:<span
+                                                                        style="color: red">*</span></label>
+                                                                <input type="text" id="textTotal" class="form-control" readonly>
+                                                            </div>
+
+                                                            <div class="col-4">
+
+                                                            </div>
+
+                                                            <!--Registration Status-->
+                                                            <div class="col-4">
+                                                                <label for="selectRegStatus" class="form-label">Registration
+                                                                    Status :
+                                                                    <span style="color: red;">*</span> </label>
+                                                                <select class="form-select" id="selectRegStatus" onchange="selectValidator(selectRegStatus,'new_student_registration','student_registration_status_id','old_student_registration')" required></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-3">
+                                        <h3 class="h3 text-center">Subjects</h3>
+
+                                        <div id="divSubjects">
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-lg-5">
+                                    <div class="col-4"></div>
+                                    <div class="col-8">
+                                        <button class="btn fw-bold" type="reset" style="width: 33%">CLEAR</button>
+                                        <button class="btn fw-bold" id="studentRegistrationUpdate" onclick="updateStuReg()" style="width: 33%">UPDATE</button>
+                                        <button class="btn fw-bold" id="studentRegistrationSubmit" onclick="SubmitStuReg()" style="width: 33%">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--table area-->
+                        <div class="tab-pane" id="table" role="tabpanel" aria-labelledby="form-tab"
+                             tabindex="0" style="height:auto">
+                            <table class="table table-striped table-hover" id="studentRegistrationTable">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Academic Year</th>
+                                        <th>Student</th>
+                                        <th>Classroom</th>
+                                        <th>Subjects</th>
+                                        <th>Registration Status</th>
+                                        <th>Modify</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

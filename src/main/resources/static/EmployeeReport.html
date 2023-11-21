@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+  <!-- bootstrap 5 -->
+  <link href="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <script src="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- css -->
+  <link href="./style.css" rel="stylesheet"/>
+
+  <!-- Jquery -->
+  <script src="./Resources/JQuery/JQuery.js"></script>
+
+  <!-- Js -->
+  <script src="./EmployeeReport.js"></script>
+
+  <!-- Font awesome -->
+  <link href="Resources/font-awesome/font-awesome/css/all.css" rel="stylesheet"/>
+
+  <!-- common js functions -->
+  <script src="./Resources/script/common.js"></script>
+
+
+  <!-- title bar icon-->
+  <link href="./Resources/Images/logo.jpg" rel="icon"/>
+    <title>Employee Report</title>
+</head>
+<body>
+
+<div class="container-fluid ">
+
+  <div class="card">
+    <div class="card-header">
+      <h1>Employee Report</h1>
+    </div>
+
+    <div class="card-body">
+      <table id="tableEmployee" class="mt-lg-5 table table-hover">
+        <thead class="table-dark">
+        <tr>
+          <th>#</th>
+          <th>Registration No:</th>
+          <th>Full Name</th>
+          <th>Gender</th>
+          <th>Guardian</th>
+          <th>Guardian Mobile No.</th>
+          <th>Student Status</th>
+          <th>Modify</th>
+        </tr>
+        </thead>
+
+        <tbody>
+
+        </tbody>
+
+        <tfoot>
+        <tr class="col text-end">
+          <button class="btn" onclick="printEmployeeTable()">Print Employee Table</button>
+        </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+
+</div>
+</body>
+</html>

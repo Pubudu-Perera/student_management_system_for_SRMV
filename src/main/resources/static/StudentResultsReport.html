@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <script src="./Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Jquery -->
+    <script src="./Resources/JQuery/JQuery.js"></script>
+
+    <!-- Js -->
+    <script src="./Guardian.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Resources/font-awesome/font-awesome/css/all.css" />
+
+    <!-- common js functions -->
+    <script src="./Resources/script/common.js"></script>
+
+    <!--     Jquery data tables -->
+    <link rel="stylesheet" href="./Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css">
+    <script src="./Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- title bar icon-->
+    <link rel="icon" href="./Resources/Images/logo.jpg" />
+
+    <!-- font = Robato -->
+    <link rel="stylesheet" href="./Resources/Font/Roboto-Regular.ttf" />
+
+
+    <title>Student Results</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+
+
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Student
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Guardian.html">Guardian Registration</a></li>
+                                <li><a class="dropdown-item" href="Student.html">Student Registration</a></li>
+                                <li><a class="dropdown-item" href="StudentRegistration.html">Assign Students to classroom</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Academic Year & Events
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Academic_Year.html">Academic Year & Events</a></li>
+                                <li><a class="dropdown-item" href="Classroom.html">Classroom management</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Examination
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Exam.html">Exams</a></li>
+                                <li><a class="dropdown-item" href="ExamResults.html">Exam Results</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 mt-1">
+                            <a class="nav-link active fw-bold" aria-current="page" href="Attendance.html" style="color: rgb(254,241,4);">Attendance</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Employee
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="Employee.html">Employee Registration</a></li>
+                                <li><a class="dropdown-item" href="Teacher.html">Teacher Registration</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 mt-1" >
+                            <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Administration
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="User.html">User Management</a></li>
+                                <li><a class="dropdown-item" href="Privilege.html">Privilege Management</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item ms-lg-5 dropdown mt-1">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                                Reports
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="row">
+            <div class="col">
+
+                <div class="card" style="height: 200vh;">
+                    <div class="card-header">
+                        <h1 class="h1">Student Result Report</h1>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+
+<!--                            Student-->
+                            <div class="col-3">
+
+                                <!-- Exam-->
+                                <label for="selectAcaYear" class="form-label">Examination :
+                                    <span style="color: red;">*</span> </label>
+                                <select class="form-select" id="selectAcaYear" required>
+                                    <option selected>2023-1st Term Test- Grade10</option>
+                                </select>
+                            </div>
+
+                            <div class="col-1"></div>
+<!--                            Exam-->
+                            <div class="col-3">
+                                <!-- Exam-->
+                                <label for="se" class="form-label">Classroom :
+                                    <span style="color: red;">*</span> </label>
+                                <select class="form-select" id="se" required>
+                                    <option selected>10-A</option>
+                                </select>
+
+                            </div>
+
+                            <div class="col-1"></div>
+
+                            <div class="col-3">
+                                <!-- Exam-->
+                                <label for="sse" class="form-label">Student :
+                                    <span style="color: red;">*</span> </label>
+                                <select class="form-select" id="sse" required>
+                                    <option selected>Shanaka Dilshan Perera</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-3"></div>
+                            <div class="col-6">
+
+                                <div class="row">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Subject</th>
+                                            <th>Mark</th>
+                                            <th>Grade</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Sinhala</td>
+                                            <td>79</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Religion</td>
+                                            <td>87</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Mathematics</td>
+                                            <td>81</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Science</td>
+                                            <td>70</td>
+                                            <td>B</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>History</td>
+                                            <td>91</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>English</td>
+                                            <td>78</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Geography</td>
+                                            <td>90</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Information Technology</td>
+                                            <td>79</td>
+                                            <td>A</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Eastern Music</td>
+                                            <td>76</td>
+                                            <td>A</td>
+                                        </tr>
+                                        </tbody>
+
+                                    </table>
+
+                                    <div class="row mt-5">
+                                        <div class="col-4">
+                                            <div class="input-group">
+                                            <span class="input-group-text fw-bold"
+                                                  for="textUsername">Total :<span
+                                                    style="color: red; font-size: 18px">*</span></span>
+                                                <input class="form-control" id="textUsername" onkeyup="textValidator(textUsername,'^[A-Za-z0-9]{5,15}$','new_user','username','old_user')"
+                                                       placeholder="Enter username" value="731"
+                                                       required
+                                                       type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="input-group">
+                                            <span class="input-group-text fw-bold"
+                                                  for="tt">Average :<span
+                                                    style="color: red; font-size: 18px">*</span></span>
+                                                <input class="form-control" id="tt" onkeyup="textValidator(textUsername,'^[A-Za-z0-9]{5,15}$','new_user','username','old_user')"
+                                                       placeholder="Enter username" value="81.23"
+                                                       required
+                                                       type="text">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-4">
+                                            <div class="input-group">
+                                            <span class="input-group-text fw-bold"
+                                                  for="ggg">Rank :<span
+                                                    style="color: red; font-size: 18px">*</span></span>
+                                                <input class="form-control" id="ggg" onkeyup="textValidator(textUsername,'^[A-Za-z0-9]{5,15}$','new_user','username','old_user')"
+                                                       placeholder="Enter username" value="2"
+                                                       required
+                                                       type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+    <script src="Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Resources/font-awesome/font-awesome/css/all.css"/>
+
+    <!-- Jquery -->
+    <script src="Resources/JQuery/JQuery.js"></script>
+
+    <!--     Jquery data tables -->
+    <link rel="stylesheet" href="Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css">
+    <script src="Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Js -->
+    <script src="Payment.js"></script>
+
+    <!-- common js functions -->
+    <script src="Resources/script/common.js"></script>
+
+    <!-- title bar icon-->
+    <link rel="icon" href="Resources/Images/logo.jpg"/>
+
+    <title>Student Payment Management</title>
+
+
+</head>
+<body>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Student
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/guardian">Guardian Registration</a></li>
+                            <li><a class="dropdown-item" href="/student">Student Registration</a></li>
+                            <li><a class="dropdown-item" href="/student_registration">Assign Students to classroom</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Academic Year & Events
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/academic_year">Academic Year & Events</a></li>
+                            <li><a class="dropdown-item" href="/classroom">Classroom management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Examination
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/exam">Exams</a></li>
+                            <li><a class="dropdown-item" href="/exam_results">Exam Results</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1">
+                        <a class="nav-link active fw-bold" aria-current="page" href="/attendance" style="color: rgb(254,241,4);">Attendance</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Employee
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/employee">Employee Registration</a></li>
+                            <li><a class="dropdown-item" href="/teacher">Teacher Registration</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1" >
+                        <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Administration
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/user">User Management</a></li>
+                            <li><a class="dropdown-item" href="/privilege">Privilege Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card" style="height: 200vh;">
+                <div class="card-header">
+                    <h1 class="h1">Payment Management</h1>
+                </div>
+
+                <div class="card-body">
+
+                    <!--Modal button area-->
+                    <div class="row mt-2">
+
+                        <div class="col-6">
+
+                        </div>
+
+                        <div class="col-6">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentAddModal" style=" float:right">Add New Payment</button>
+                        </div>
+                    </div>
+
+                    <div class="row mt-2">
+                        <table id="tablePayment" class="table table-striped table-hover">
+                            <thead class="table-dark">
+                            <tr>
+                                <th>Index</th>
+                                <th>Bill No.</th>
+                                <th>Student</th>
+                                <th>Total Amount</th>
+                                <th>Paid Amount</th>
+                                <th>Balance</th>
+                                <th>Modify</th>
+                            </tr>
+                            </thead>
+
+
+                            <tbody>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--payment form-->
+<div class="modal fade" id="paymentAddModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Payment Form</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <form method="post" id="paymentForm">
+
+                    <!--*-->
+                    <div class="row text-end">
+                        <div class="col">
+                            <span class="fw-bold"><span style="color:red ;">*</span>Required</span>
+                        </div>
+                    </div>
+
+                    <!--Student-->
+                    <div class="row mt-3">
+
+<!--                        Student-->
+                        <div class="col-6">
+                            <label for="selectInputStudent" class="form-label">Student :
+                                <span style="color: red;">*</span> </label>
+                            <input type="text" list="studentDataList" placeholder="Search & Select the student" class="form-control" id="selectInputStudent"
+                                   onchange="dataListValidator(selectInputStudent,'','new_payment','student_registration_id','old_payment','registered_students','student_id.full_name',showStudent,'student_id.registration_no'); totalAmountForAca();"
+                                   onkeyup="dataListValidator(selectInputStudent,'','new_payment','student_registration_id','old_payment','registered_students','student_id.full_name',showStudent,'student_id.registration_no')">
+                            <datalist id="studentDataList">
+
+                            </datalist>
+
+                            <div class="form-text" id="showStudent">Student's Registration Number is</div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!--Total-->
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <label for="textTotal" class="fw-bold form-label">Total Amount  :<span style="color:red ;">*</span></label>
+
+                            <input type="number" id="textTotal" class="form-control" placeholder="Enter full amount" readonly required>
+                        </div>
+                    </div>
+
+
+
+                    <!--Paid-->
+                    <div class="row mt-3">
+
+                        <div class="col-6">
+                            <label for="textPaid" class="fw-bold form-label">Paid Amount  :<span style="color:red ;">*</span></label>
+
+                            <input type="number" id="textPaid" class="form-control" placeholder="Enter paid amount" onkeyup="textValidator(textPaid,'','new_payment','paid_amount','old_payment'); getBalance();"
+                                   required>
+                        </div>
+
+                    </div>
+
+
+
+                    <!--Balance-->
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <label for="textBalance" class="fw-bold form-label">Balance :<span style="color:red ;">*</span></label>
+
+                            <input type="number" id="textBalance" class="form-control" readonly>
+
+                        </div>
+                    </div>
+
+                    <!--Buttons-->
+                    <div class="row mt-5">
+
+                        <div class="col-6">
+
+                        </div>
+
+                        <div class="col-6 text-end">
+
+                            <button type="button" class="btn btn-danger btn-lg" onclick="resetPaymentForm()">CLEAR</button>
+
+                            <button type="button" class="btn btn-success btn-lg" onclick="submitPaymentForm()">SUBMIT</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

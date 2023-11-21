@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- bootstrap 5 -->
+    <link rel="stylesheet" href="Resources/Bootstrap%205/bootstrap-5.0.2-dist/css/bootstrap.min.css"/>
+    <script src="Resources/Bootstrap%205/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="Resources/font-awesome/font-awesome/css/all.css"/>
+
+    <!-- Jquery -->
+    <script src="Resources/JQuery/JQuery.js"></script>
+
+    <!--     Jquery data tables -->
+    <link rel="stylesheet" href="Resources/JQuery/DataTables-1.12.1/css/jquery.dataTables.min.css">
+    <script src="Resources/JQuery/DataTables-1.12.1/js/jquery.dataTables.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Js -->
+    <script src="Teacher.js"></script>
+
+    <!-- common js functions -->
+    <script src="Resources/script/common.js"></script>
+
+    <!-- title bar icon-->
+    <link rel="icon" href="Resources/Images/logo.jpg"/>
+
+    <title>Teacher Management</title>
+
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(115,20,18);">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="Index.html" style="color: rgb(254,241,4);">DASHBOARD</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownStudent" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Student
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownStudent" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/guardian">Guardian Registration</a></li>
+                            <li><a class="dropdown-item" href="/student">Student Registration</a></li>
+                            <li><a class="dropdown-item" href="/student_registration">Assign Students to classroom</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAca" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Academic Year & Events
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAca" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/academic_year">Academic Year & Events</a></li>
+                            <li><a class="dropdown-item" href="/classroom">Classroom management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownExam" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Examination
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownExam" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/exam">Exams</a></li>
+                            <li><a class="dropdown-item" href="/exam_results">Exam Results</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1">
+                        <a class="nav-link active fw-bold" aria-current="page" href="/attendance" style="color: rgb(254,241,4);">Attendance</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownEmployee" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Employee
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownEmployee" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/employee">Employee Registration</a></li>
+                            <li><a class="dropdown-item" href="/teacher">Teacher Registration</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 mt-1" >
+                        <a class="nav-link fw-bold" href="Payment.html" style="color: rgb(254,241,4);">Payments</a>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdownAdministration" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Administration
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownAdministration" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="/user">User Management</a></li>
+                            <li><a class="dropdown-item" href="/privilege">Privilege Management</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item ms-lg-5 dropdown mt-1">
+                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarReports" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(254,241,4);">
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarReports" style="background-color: rgb(115,20,18);">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Teacher Management</h1>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs justify-content-end" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="form-tab" data-bs-toggle="tab"
+                                    data-bs-target="#form" type="button" role="tab" aria-controls="form"
+                                    aria-selected="true">
+                                Teacher Form
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table"
+                                    type="button" role="tab" aria-controls="table" aria-selected="false">
+                                Teacher Table
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- tab content-->
+                    <div class="tab-content">
+
+                        <!-- form area -->
+                        <div class="tab-pane active" id="form" role="tabpanel" aria-labelledby="form-tab" tabindex="0"
+                             style="height:auto ;">
+
+
+                            <form onsubmit="return false" id="TeacherForm">
+
+<!--                                Main + inner forms area-->
+                                <div class="row mt-3">
+
+                                    <!-- Required -->
+                                    <div class="row mt-3">
+                                        <p style="text-align: right; font-weight: bold;"><span
+                                                style="color:red;">*</span>Required </p>
+                                    </div>
+
+
+                                    <!-- Main form area-->
+                                    <div class="col-6">
+
+                                        <!-- Teacher-->
+                                        <div class="row mt-5">
+
+                                            <div class="col-6">
+                                                <label class="form-label" for="selectEmployee">Teacher's Name :<span
+                                                        style="color: red">*</span></label>
+
+                                                <select class="form-select" id="selectEmployee" required
+                                                        onchange="selectValidator(selectEmployee,'new_teacher','employee_id', 'old_teacher'); teacherDetailsAutoFill();"></select>
+                                            </div>
+
+                                            <!--calling name -->
+                                            <div class="col-6">
+                                                <label class="form-label" for="textCallingName">Teacher's Calling
+                                                    Name</label>
+                                                <input class="form-control" type="text" id="textCallingName" readonly>
+                                            </div>
+                                        </div>
+
+
+                                        <!-- nic + mobile-->
+                                        <div class="row mt-3">
+
+                                            <!--NIC-->
+                                            <div class="col-6">
+                                                <label class="form-label" for="textNIC">Teacher's NIC</label>
+                                                <input class="form-control" type="text" id="textNIC" readonly>
+                                            </div>
+
+
+                                            <!--Mobile-->
+                                            <div class="col-6">
+                                                <label class="form-label" for="textMobile">Teacher's Mobile
+                                                    Number</label>
+                                                <input class="form-control" type="text" id="textMobile" readonly>
+                                            </div>
+
+                                        </div>
+
+
+                                        <!--  Previous School + Qualifications-->
+                                        <div class="row mt-3">
+
+                                            <!--Previous school -->
+                                            <div class="col-6">
+                                                <label class="form-label" for="textPrevSchool">Previous Schools
+                                                    :</label>
+                                                <textarea class="form-control" id="textPrevSchool"
+                                                          onkeyup="textValidator(textPrevSchool,'','new_teacher','previous_school','old_teacher')"></textarea>
+                                            </div>
+
+                                            <!--Qualifications -->
+                                            <div class="col-6">
+                                                <label class="form-label" for="textQualifications">Qualifications
+                                                    :<span style="color: red">*</span></label>
+                                                <textarea class="form-control" id="textQualifications"
+                                                          onkeyup="textValidator(textQualifications,'','new_teacher','qualifications','old_teacher')" required></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="col-1"></div>
+
+
+
+                                    <!-- Inner form area-->
+                                    <div class="col-5">
+
+                                        <div class="row mt-lg-5">
+                                            <div class="col text-center">
+                                                <h3 class="h3 fw-bold" style="color: var(--primary-color)">Teaching Subjects</h3>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col" id="divSubjects">
+                                                <p class="fw-bold">Select subjects the teacher can teach : <span class="text-danger">*</span> </p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row mt-5">
+                                    <div class="col text-end">
+                                        <button type="reset" class="btn fw-bold" style="width: 25%">CLEAR</button>
+                                        <button type="submit" class="btn fw-bold" style="width: 25%" onclick="updateTeacher()">UPDATE</button>
+                                        <button type="submit" class="btn fw-bold" style="width: 25%" onclick="submitTeacher()">SUBMIT</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+
+                        <!-- table area-->
+                        <div class="tab-pane active" id="table" role="tabpanel" aria-labelledby="form-tab" tabindex="0">
+                            <div class="row">
+                                <div class="col">
+                                    <table id="teacherTable" class="table table-striped table-hover">
+                                        <thead class="table-dark">
+                                        <tr>
+                                            <th>Index</th>
+                                            <th>Teacher name</th>
+                                            <th>Previous school</th>
+                                            <th>Qualifications</th>
+                                            <th>Subjects</th>
+                                            <th>Modify</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
